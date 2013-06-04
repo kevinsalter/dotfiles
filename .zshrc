@@ -20,6 +20,10 @@ alias ...='../.../'
 alias vhosts='sublime /etc/hosts'
 alias art='php artisan'
 alias chrome='open -a "Google Chrome"'
+alias desk='cd ~/Desktop/'
+alias git-undo='git reset --soft HEAD~1'
+alias gstt='git status -sb'
+alias git-count='git shortlog -sn'
 
 function f4() { compass create $1 -r zurb-foundation --using foundation }
 function tbs() { compass create $1 -r bootstrap-sass --using bootstrap }
