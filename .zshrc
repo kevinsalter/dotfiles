@@ -15,14 +15,18 @@ alias showlibrary='chflags nohidden ~/Library/'
 alias hidelibrary='chflags hidden ~/Library'
 alias er='~/Localhost/er_dev/mainsite/'
 alias mampsql="/Applications/MAMP/Library/bin/mysql"
-alias ..='../'
-alias ...='../.../'
+alias ..='cd ..'            # Go up one directory
+alias ...='cd ../..'        # Go up two directories
+alias ....='cd ../../..'    # And for good measure
+alias l='ls -lah'           # Long view, show hidden
+alias la='ls -AF'           # Compact view, show hidden
+alias ll='ls -lFh'          # Long view, no hidden
 alias vhosts='sublime /etc/hosts'
 alias art='php artisan'
 alias chrome='open -a "Google Chrome"'
 alias desk='cd ~/Desktop/'
 alias git-undo='git reset --soft HEAD~1'
-alias gstt='git status -sb'
+alias gst='git status -sb'
 alias git-count='git shortlog -sn'
 
 function f4() { compass create $1 -r zurb-foundation --using foundation }
