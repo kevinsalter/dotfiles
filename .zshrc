@@ -13,7 +13,6 @@ alias handlesbars="/usr/local/share/npm/lib/node_modules/handlebars/bin/handleba
 alias glogd="git log --oneline --graph --decorate"
 alias showlibrary='chflags nohidden ~/Library/'
 alias hidelibrary='chflags hidden ~/Library'
-alias er='~/Localhost/er_dev/mainsite/'
 alias mampsql="/Applications/MAMP/Library/bin/mysql"
 alias ..='cd ..'            # Go up one directory
 alias ...='cd ../..'        # Go up two directories
@@ -21,6 +20,8 @@ alias ....='cd ../../..'    # And for good measure
 alias l='ls -lah'           # Long view, show hidden
 alias la='ls -AF'           # Compact view, show hidden
 alias ll='ls -lFh'          # Long view, no hidden
+alias be='bundle exec'
+alias rake="noglob rake"
 alias vhosts='sublime /etc/hosts'
 alias art='php artisan'
 alias chrome='open -a "Google Chrome"'
@@ -28,9 +29,10 @@ alias desk='cd ~/Desktop/'
 alias git-undo='git reset --soft HEAD~1'
 alias gst='git status -sb'
 alias git-count='git shortlog -sn'
-
-function f4() { compass create $1 -r zurb-foundation --using foundation }
-function tbs() { compass create $1 -r bootstrap-sass --using bootstrap }
+alias gitl='git log --pretty=format:"%h - %an, %ar : %s"'
+alias lo='cd Localhost/'
+alias bower='noglob bower'
+alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -54,10 +56,18 @@ plugins=(git github sublime)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
+# PATH
 export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/Users/kevin_salter/.rvm/gems/ruby-1.9.3-p194/bin:/Users/kevin_salter/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/kevin_salter/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/kevin_salter/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/kevin_salter/.rvm/bin:/Users/kevin_salter/.rvm/bin
 export PATH=${PATH}:/Applications/adt-bundle-mac-x86_64-20130219/sdk/platform-tools:
+export PATH=${PATH}:/Users/kevin_salter/Localhost/bex-dev/elixir/bin:
+export PATH=${PATH}:/Users/kevin_salter/Localhost/bexng/elixir/bin:
+export PATH=${PATH}:/usr/local/php54/bin:
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*alias git=hub
 if type compdef >/dev/null; then
    compdef hub=git
 fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+__rvm_project_rvmrc
