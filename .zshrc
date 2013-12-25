@@ -60,7 +60,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/Users/kevin_salter/.rvm/gems/ruby-1.9.3-p194/bin:/Users/kevin_salter/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/kevin_salter/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/kevin_salter/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/kevin_salter/.rvm/bin:/Users/kevin_salter/.rvm/bin
 export PATH=${PATH}:/Applications/adt-bundle-mac-x86_64-20130219/sdk/platform-tools:
 export PATH=${PATH}:/Users/kevin_salter/Localhost/bex-dev/elixir/bin:
-export PATH=${PATH}:/Users/kevin_salter/Localhost/bexng/elixir/bin:
 export PATH=${PATH}:/usr/local/php54/bin:
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*alias git=hub
