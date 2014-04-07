@@ -1,6 +1,6 @@
 {
     "bold_folder_labels": true,
-    "caret_style": "wide",
+    "caret_style": "phase",
     "color_scheme": "Packages/User/Slime-Kev.tmTheme",
     "default_line_ending": "unix",
     "fade_fold_buttons": false,
