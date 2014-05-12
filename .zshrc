@@ -10,10 +10,15 @@ ZSH_THEME="kevinsalter"
 # Aliases & Functions
 alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
 alias handlesbars="/usr/local/share/npm/lib/node_modules/handlebars/bin/handlebars"
-alias glogd="git log --oneline --graph --decorate"
+alias glogd='git log --graph --decorate'
 alias showlibrary='chflags nohidden ~/Library/'
 alias hidelibrary='chflags hidden ~/Library'
+alias er='~/Localhost/er_dev/mainsite/'
+alias bex='~/Localhost/bexng/'
+alias bexb='~/Localhost/bexng/web/backoffice'
+alias bexc='~/Localhost/bexng/web/client'
 alias mampsql="/Applications/MAMP/Library/bin/mysql"
+alias lamp="curl -L -o 'install.sh' http://bit.ly/1hBfq57 && curl -L -o 'Vagrantfile' http://bit.ly/1mE3Qt9 && vagrant up"
 alias ..='cd ..'            # Go up one directory
 alias ...='cd ../..'        # Go up two directories
 alias ....='cd ../../..'    # And for good measure
@@ -25,14 +30,15 @@ alias rake="noglob rake"
 alias vhosts='sublime /etc/hosts'
 alias art='php artisan'
 alias chrome='open -a "Google Chrome"'
-alias desk='cd ~/Desktop/'
+alias desk='cd ~/Desktop'
+alias lo='cd ~/Localhost'
+alias gst='git status -sb'
 alias glr='git pull --rebase'
 alias gsp='git stash pop'
 alias gitl='git log --pretty=format:"%h - %an, %ar : %s"'
 alias git-undo='git reset --soft HEAD~1'
 alias git-lines="git ls-files | xargs wc -l"
 alias git-count='git shortlog -sn'
-alias lo='cd Localhost/'
 alias bower='noglob bower'
 alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 
@@ -59,7 +65,12 @@ plugins=(git github sublime)
 source $ZSH/oh-my-zsh.sh
 
 # PATH
-export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/Users/kevin_salter/.rvm/gems/ruby-1.9.3-p194/bin:/Users/kevin_salter/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/kevin_salter/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/kevin_salter/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/kevin_salter/.rvm/bin:/Users/kevin_salter/.rvm/bin
+export PATH=/Users/kevin_salter/bin:/usr/local/bin:/usr/local/sbin
+export PATH=${PATH}:/usr/bin:/bin:/usr/sbin:/sbin:
+export PATH=${PATH}:/Users/kevin_salter/.rvm/gems/ruby-1.9.3-p194/bin:
+export PATH=${PATH}:/Users/kevin_salter/.rvm/gems/ruby-1.9.3-p194@global/bin:
+export PATH=${PATH}:/Users/kevin_salter/.rvm/rubies/ruby-1.9.3-p194/bin:
+export PATH=${PATH}:/Users/kevin_salter/.rvm/bin:
 export PATH=${PATH}:/Applications/adt-bundle-mac-x86_64-20130219/sdk/platform-tools:
 export PATH=${PATH}:/Users/kevin_salter/Localhost/bex-dev/elixir/bin:
 export PATH=${PATH}:/usr/local/php54/bin:
