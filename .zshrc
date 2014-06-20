@@ -67,19 +67,13 @@ source $ZSH/oh-my-zsh.sh
 # PATH
 export PATH=/Users/kevin_salter/bin:/usr/local/bin:/usr/local/sbin
 export PATH=${PATH}:/usr/bin:/bin:/usr/sbin:/sbin:
-export PATH=${PATH}:/Users/kevin_salter/.rvm/gems/ruby-1.9.3-p194/bin:
-export PATH=${PATH}:/Users/kevin_salter/.rvm/gems/ruby-1.9.3-p194@global/bin:
-export PATH=${PATH}:/Users/kevin_salter/.rvm/rubies/ruby-1.9.3-p194/bin:
-export PATH=${PATH}:/Users/kevin_salter/.rvm/bin:
 export PATH=${PATH}:/Applications/adt-bundle-mac-x86_64-20130219/sdk/platform-tools:
 export PATH=${PATH}:/Users/kevin_salter/code/bex-dev/elixir/bin:
 export PATH=${PATH}:/usr/local/php54/bin:
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*alias git=hub
+# export WORKON_HOME="$HOME/.virtualenvs"
+# source /usr/local/bin/virtualenvwrapper.sh
+
 if type compdef >/dev/null; then
    compdef hub=git
 fi
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-__rvm_project_rvmrc
