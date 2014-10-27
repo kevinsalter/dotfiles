@@ -13,12 +13,6 @@ alias handlesbars="/usr/local/share/npm/lib/node_modules/handlebars/bin/handleba
 alias glogd='git log --graph --decorate'
 alias showlibrary='chflags nohidden ~/Library/'
 alias hidelibrary='chflags hidden ~/Library'
-alias er='~/code/er_dev/mainsite/'
-alias bex='~/code/bexng/'
-alias bexb='~/code/bexng/web/backoffice'
-alias bexc='~/code/bexng/web/client'
-alias mampsql="/Applications/MAMP/Library/bin/mysql"
-alias lamp="curl -L -o 'install.sh' http://bit.ly/1hBfq57 && curl -L -o 'Vagrantfile' http://bit.ly/1mE3Qt9 && vagrant up"
 alias ..='cd ..'            # Go up one directory
 alias ...='cd ../..'        # Go up two directories
 alias ....='cd ../../..'    # And for good measure
@@ -67,13 +61,12 @@ source $ZSH/oh-my-zsh.sh
 # PATH
 export PATH=/Users/kevin_salter/bin:/usr/local/bin:/usr/local/sbin
 export PATH=${PATH}:/usr/bin:/bin:/usr/sbin:/sbin:
-export PATH=${PATH}:/Applications/adt-bundle-mac-x86_64-20130219/sdk/platform-tools:
-export PATH=${PATH}:/Users/kevin_salter/code/bex-dev/elixir/bin:
-export PATH=${PATH}:/usr/local/php54/bin:
 
 # export WORKON_HOME="$HOME/.virtualenvs"
 # source /usr/local/bin/virtualenvwrapper.sh
 
 if type compdef >/dev/null; then
-   compdef hub=git
+  compdef hub=git
 fi
+
+source $HOME/.bash_profile
