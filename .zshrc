@@ -1,13 +1,11 @@
-# Path to your oh-my-zsh configuration.
+### Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+### Set name of the theme to load.
+### Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="kevinsalter"
 
-# Aliases & Functions
+### Aliases & Functions
 alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
 alias handlesbars="/usr/local/share/npm/lib/node_modules/handlebars/bin/handlebars"
 alias glogd='git log --graph --decorate'
@@ -19,9 +17,10 @@ alias ....='cd ../../..'    # And for good measure
 alias l='ls -lah'           # Long view, show hidden
 alias la='ls -AF'           # Compact view, show hidden
 alias ll='ls -lFh'          # Long view, no hidden
+alias b2='boot2docker'
 alias be='bundle exec'
 alias rake="noglob rake"
-alias vhosts='sublime /etc/hosts'
+alias vhosts='st /etc/hosts'
 alias art='php artisan'
 alias chrome='open -a "Google Chrome"'
 alias desk='cd ~/Desktop'
@@ -54,19 +53,31 @@ alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github sublime)
+plugins=(git sublime)
 
 source $ZSH/oh-my-zsh.sh
 
-# PATH
-export PATH=/Users/kevin_salter/bin:/usr/local/bin:/usr/local/sbin
+### PATH
+export PATH=/Users/kevinsalter/bin:/usr/local/bin:/usr/local/sbin
 export PATH=${PATH}:/usr/bin:/bin:/usr/sbin:/sbin:
 
-# export WORKON_HOME="$HOME/.virtualenvs"
-# source /usr/local/bin/virtualenvwrapper.sh
+### virtualenvwrapper vars
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
 
+### hub is a command-line wrapper for git
 if type compdef >/dev/null; then
   compdef hub=git
 fi
 
+### calls eval "$(rbenv init -)"
 source $HOME/.bash_profile
+
+### boot2docker vars
+export DOCKER_CERT_PATH=/Users/kevinsalter/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST=tcp://192.168.59.103:2376
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
