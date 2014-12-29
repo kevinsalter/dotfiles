@@ -1,0 +1,12 @@
+[color]
+    ui = true
+[user]
+    name = Kevin Salter
+    email = kevins@7Geese.com
+[push]
+    default = simple
+[credential]
+    helper = osxkeychain
+[alias]
+    prev = checkout HEAD^1
+    next = "!sh -c 'git log --reverse --pretty=%H master | awk \"/$(git rev-parse HEAD)/{getline;print}\" | xargs git checkout'"
