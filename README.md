@@ -1,6 +1,8 @@
 ##dotfiles & backups
 
-...just in case...
+## .gitconfig
+
+**note** the [alias] commands will only work on `[master]`
 
 ## Global .gitignore
 
