@@ -7,7 +7,6 @@ ZSH_THEME="kevinsalter"
 
 ### Aliases & Functions
 alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
-alias handlesbars="/usr/local/share/npm/lib/node_modules/handlebars/bin/handlebars"
 alias glogd='git log --graph --decorate'
 alias showlibrary='chflags nohidden ~/Library/'
 alias hidelibrary='chflags hidden ~/Library'
@@ -17,7 +16,6 @@ alias ....='cd ../../..'    # And for good measure
 alias l='ls -lah'           # Long view, show hidden
 alias la='ls -AF'           # Compact view, show hidden
 alias ll='ls -lFh'          # Long view, no hidden
-alias b2='boot2docker'
 alias be='bundle exec'
 alias rake="noglob rake"
 alias vhosts='st /etc/hosts'
@@ -34,6 +32,7 @@ alias git-lines="git ls-files | xargs wc -l"
 alias git-count='git shortlog -sn'
 alias bower='noglob bower'
 alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
+alias sha256='shasum -a 256'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
