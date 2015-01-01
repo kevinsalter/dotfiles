@@ -1,0 +1,28 @@
+### Aliases & Functions
+alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
+alias glogd='git log --graph --decorate'
+alias showlibrary='chflags nohidden ~/Library/'
+alias hidelibrary='chflags hidden ~/Library'
+alias ..='cd ..'            # Go up one directory
+alias ...='cd ../..'        # Go up two directories
+alias ....='cd ../../..'    # And for good measure
+alias l='ls -lah'           # Long view, show hidden
+alias la='ls -AF'           # Compact view, show hidden
+alias ll='ls -lFh'          # Long view, no hidden
+alias be='bundle exec'
+alias rake="noglob rake"
+alias vhosts='st /etc/hosts'
+alias art='php artisan'
+alias chrome='open -a "Google Chrome"'
+alias desk='cd ~/Desktop'
+alias code='cd ~/code'
+alias gst='git status -sb'
+alias glr='git pull --rebase'
+alias gsp='git stash pop'
+alias gitl='git log --pretty=format:"%h - %an, %ar : %s"'
+alias git-undo='git reset --soft HEAD~1'
+alias git-lines="git ls-files | xargs wc -l"
+alias git-count='git shortlog -sn'
+alias bower='noglob bower'
+alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
+alias sha256='shasum -a 256'
