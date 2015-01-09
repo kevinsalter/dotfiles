@@ -1,20 +1,39 @@
 {
-  "binary_file_patterns": ["*.sassc"],
+  "binary_file_patterns":
+  [
+    "*.sassc"
+  ],
   "bold_folder_labels": true,
   "caret_style": "phase",
-  "color_scheme": "Packages/User/Lucario (SL).tmTheme",
+  "color_scheme": "Packages/Lucario Color Scheme/Lucario.tmTheme",
   "default_line_ending": "unix",
   "draw_white_space": "all",
+  "ensure_single_trailing_newline": true,
   "fade_fold_buttons": false,
-  "folder_exclude_patterns": [".svn",".git",".hg","CVS"],
+  "folder_exclude_patterns":
+  [
+    ".svn",
+    ".git",
+    ".hg",
+    "CVS"
+  ],
   "font_face": "DejaVu Sans Mono",
   "font_size": 15.0,
   "highlight_line": true,
-  "ignored_packages": ["Vintage"],
+  "ignore_whitespace_on_current_line": true,
+  "ignore_whitespace_only_lines": false,
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
   "itg_small_tabs": true,
   "line_padding_bottom": 1,
   "line_padding_top": 1,
-  "rulers": [80],
+  "remove_trailing_whitespace_on_save": true,
+  "rulers":
+  [
+    80
+  ],
   "theme": "itg.flat.light.sublime-theme",
   "translate_tabs_to_spaces": true,
   "trimTrailingWhiteSpaceOnSave": true
