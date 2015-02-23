@@ -9,6 +9,7 @@ alias cp="cp -R"
 alias mkdir="mkdir -p"
 alias grep="grep --color"
 alias yy="rsync -azv --progress"  # --archive (copy perms, etc.) --zip --verbose
+                                  # rsync <source> <destination>
 
 ### Git Aliases
 alias gst='git status -sb'
