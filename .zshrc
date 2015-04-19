@@ -43,8 +43,6 @@ export PATH=${PATH}:/usr/bin:/bin:/usr/sbin:/sbin:
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/code
 source /usr/local/bin/virtualenvwrapper.sh
-# pip install autoenv
-source /usr/local/opt/autoenv/activate.sh
 
 
 ### hub is a command-line wrapper for git
