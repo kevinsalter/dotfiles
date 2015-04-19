@@ -1,12 +1,15 @@
 ### Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+
 ### Set name of the theme to load.
 ### Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="kevinsalter"
 
+
 ### loads my Aliases & Functions
 source $HOME/.aliases
+
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -30,27 +33,36 @@ plugins=(git sublime)
 
 source $ZSH/oh-my-zsh.sh
 
+
 ### PATH
 export PATH=/Users/kevinsalter/bin:/usr/local/bin:/usr/local/sbin
 export PATH=${PATH}:/usr/bin:/bin:/usr/sbin:/sbin:
 
-### virtualenvwrapper vars
+
+# pip install virtualenv && virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
+export PROJECT_HOME=$HOME/code
 source /usr/local/bin/virtualenvwrapper.sh
+# pip install autoenv
+source /usr/local/opt/autoenv/activate.sh
+
 
 ### hub is a command-line wrapper for git
+# brew install hub
 if type compdef >/dev/null; then
   compdef hub=git
 fi
 
+
 ### calls eval "$(rbenv init -)"
 source $HOME/.bash_profile
+
 
 ### boot2docker vars
 export DOCKER_CERT_PATH=/Users/kevinsalter/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 export DOCKER_HOST=tcp://192.168.59.103:2376
+
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
