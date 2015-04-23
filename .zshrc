@@ -37,6 +37,7 @@ source $ZSH/oh-my-zsh.sh
 ### PATH
 export PATH=/Users/kevinsalter/bin:/usr/local/bin:/usr/local/sbin
 export PATH=${PATH}:/usr/bin:/bin:/usr/sbin:/sbin:
+export PATH=${PATH}:/Applications/Postgres.app/Contents/Versions/9.4/bin:
 
 
 # pip install virtualenv && virtualenvwrapper
