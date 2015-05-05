@@ -39,9 +39,24 @@ alias showlibrary='chflags nohidden ~/Library/'
 alias hidelibrary='chflags hidden ~/Library'
 
 
-# Github Issue
+# Github Issue (staging)
 gissue () {
-    git checkout staging && git pull origin staging && git checkout -b "issues/$@" && git commit -m "Opening pull-request #$@" -n --allow-empty && git push -u origin "issues/$@" && hub pull-request -i "$@"
+    git checkout staging &&
+    git pull origin staging &&
+    git checkout -b "issues/$@" &&
+    git commit -m "$(printf "Fixes #$@\n\n[ci skip]")" --allow-empty &&
+    git push -u origin "issues/$@" &&
+    hub pull-request -i "$@"
+}
+
+# Github Issue (master)
+gissuem () {
+    git checkout master &&
+    git pull origin master &&
+    git checkout -b "issues/$@" &&
+    git commit -m "Fixes #$@" --allow-empty &&
+    git push -u origin "issues/$@" &&
+    hub pull-request -i "$@"
 }
 
 # 7Geese migration
