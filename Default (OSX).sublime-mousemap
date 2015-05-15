@@ -2,8 +2,8 @@
     {
         "button": "button1",
         "count": 1,
-        "modifiers": ["super"],
+        "modifiers": ["option+super"],
         "press_command": "drag_select",
-        "command": "goto_definition"
+        "command": "goto_python_definition"
     }
 ]
