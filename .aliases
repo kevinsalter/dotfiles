@@ -5,6 +5,7 @@ alias ....='cd ../../..'    # And for good measure
 alias l='ls -lah'           # Long view, show hidden
 alias la='ls -AF'           # Compact view, show hidden
 alias ll='ls -lFh'          # Long view, no hidden
+alias lS='ls -lhS'          # Sort files by size in a directory
 alias cp="cp -R"
 alias mkdir="mkdir -p"
 alias grep="grep --color"
