@@ -40,6 +40,10 @@ export PATH=${PATH}:/usr/bin:/bin:/usr/sbin:/sbin:
 export PATH=${PATH}:/Applications/Postgres.app/Contents/Versions/9.4/bin:
 
 
+# so node modules can be required in the REPL
+export NODE_PATH=/usr/local/lib/node_modules
+
+
 # pip install virtualenv && virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/code
