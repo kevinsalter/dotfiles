@@ -9,22 +9,8 @@ ZSH_THEME="kevinsalter"
 
 ### loads my Aliases & Functions
 source $HOME/.aliases
+source $HOME/.zprofile
 
-
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -39,10 +25,8 @@ export PATH=/Users/kevinsalter/bin:/usr/local/bin:/usr/local/sbin
 export PATH=${PATH}:/usr/bin:/bin:/usr/sbin:/sbin:
 export PATH=${PATH}:/Applications/Postgres.app/Contents/Versions/9.4/bin:
 
-
 # so node modules can be required in the REPL
 export NODE_PATH=/usr/local/lib/node_modules
-
 
 # pip install virtualenv && virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
@@ -51,21 +35,22 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 
 ### hub is a command-line wrapper for git
-# brew install hub
 if type compdef >/dev/null; then
   compdef hub=git
 fi
 
+# make less pager work better with httpie
+function httpless {
+    # `httpless example.org'
+    http --pretty=all --print=hb "$@" | less -R;
+}
 
 ### calls eval "$(rbenv init -)"
 source $HOME/.bash_profile
 
 
-### boot2docker vars
-export DOCKER_CERT_PATH=/Users/kevinsalter/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-export DOCKER_HOST=tcp://192.168.59.103:2376
-
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export NVM_DIR="/Users/kevinsalter/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
