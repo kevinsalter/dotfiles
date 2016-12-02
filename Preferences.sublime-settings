@@ -1,32 +1,72 @@
 {
+  "added_words":
+  [
+    "favourite",
+    "workflows",
+    "kevinsalter",
+    "–",
+    "à",
+    "blog",
+    "personas",
+    "wireframes",
+    "composable"
+  ],
   "binary_file_patterns":
   [
     "*.sassc"
   ],
   "bold_folder_labels": true,
   "caret_style": "phase",
-  "color_scheme": "Packages/Lucario Color Scheme/Lucario.tmTheme",
+  "color_scheme": "Packages/User/SublimeLinter/Oceanic Next (SL).tmTheme",
   "default_line_ending": "unix",
-  "draw_white_space": "all",
+  "enable_tab_scrolling": false,
   "ensure_single_trailing_newline": true,
   "fade_fold_buttons": false,
+  "file_exclude_patterns":
+  [
+    "*.pyc",
+    "*.pyo",
+    "*.exe",
+    "*.dll",
+    "*.obj",
+    "*.o",
+    "*.a",
+    "*.lib",
+    "*.so",
+    "*.dylib",
+    "*.ncb",
+    "*.sdf",
+    "*.suo",
+    "*.pdb",
+    "*.idb",
+    ".DS_Store",
+    "*.class",
+    "*.psd",
+    "*.db",
+    "*.sublime-workspace",
+    "bundle.js",
+    "bundle_big.js",
+    ".tmp"
+  ],
   "folder_exclude_patterns":
   [
     ".svn",
     ".git",
     ".hg",
-    "CVS"
+    "CVS",
+    ".tmp",
+    "node_modules",
+    ".venv"
   ],
-  "font_face": "DejaVu Sans Mono",
-  "font_size": 15.0,
+  "font_face": "Hack",
+  "font_size": 13.5,
   "highlight_line": true,
-  "ignore_whitespace_on_current_line": true,
+  "ignore_whitespace_on_current_line": false,
   "ignore_whitespace_only_lines": false,
   "ignored_packages":
   [
     "Vintage"
   ],
-  "itg_small_tabs": true,
   "line_padding_bottom": 1,
   "line_padding_top": 1,
   "remove_trailing_whitespace_on_save": true,
@@ -34,7 +74,12 @@
   [
     80
   ],
-  "theme": "itg.flat.light.sublime-theme",
+  "spacegray_sidebar_font_normal": true,
+  "spacegray_sidebar_tree_normal": true,
+  "spacegray_tabs_font_large": true,
+  "spacegray_tabs_xlarge": true,
+  "spacegray_fileicons": true,
+  "theme": "Spacegray.sublime-theme",
   "translate_tabs_to_spaces": true,
   "trimTrailingWhiteSpaceOnSave": true
 }
