@@ -1,0 +1,94 @@
+### Coreutils Aliases
+alias ..='cd ..'            # Go up one directory
+alias ...='cd ../..'        # Go up two directories
+alias ....='cd ../../..'    # And for good measure
+alias l='ls -lah'           # Long view, show hidden
+alias la='ls -AF'           # Compact view, show hidden
+alias ll='ls -lFh'          # Long view, no hidden
+alias lS='ls -lhS'          # Sort files by size in a directory
+alias dots='ls -ld .?*'     # Show ONLY dot files
+alias cp="cp -R"
+alias mkdir="mkdir -p"
+alias grep="grep --color"
+alias yy="rsync -azv --progress"  # --archive (copy perms, etc.) --zip --verbose
+                                  # rsync <source> <destination>
+
+### Git Aliases
+alias gst='git status -sb'
+alias gco='git checkout'
+alias gb='git branch'
+alias gclean='git clean -fd'
+alias glr='git pull --rebase'
+alias gp='git push'
+alias gpd='git push --dry-run'
+alias gsp='git stash pop'
+alias gitl='git log --pretty=format:"%h - %an, %ar : %s"'
+alias git-undo='git reset --soft HEAD~1'
+alias git-lines="git ls-files | xargs wc -l"
+alias git-count='git shortlog -sn'
+alias glogd='git log --graph --decorate'
+
+### Aliases & Functions
+alias be='bundle exec'
+alias rake="noglob rake"
+alias art='php artisan'
+alias bower='noglob bower'
+alias sha256='shasum -a 256'
+
+alias desk='cd ~/Desktop'
+alias code='cd ~/code'
+alias vhosts='st /etc/hosts'
+alias chrome='open -a "Google Chrome"'
+alias server='open http://localhost:8000; and python -m SimpleHTTPServer'
+alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy; and echo 'Copied to clipboard.'"
+
+alias showlibrary='chflags nohidden ~/Library/'
+alias hidelibrary='chflags hidden ~/Library'
+
+
+# Github Issue
+function gissue
+    git checkout staging ; and
+    git pull origin staging ; and
+    git checkout -b "issues/$argv" ; and
+    git commit -m "Fixes #$argv" --allow-empty ; and
+    git push -u origin "issues/$argv" ; and
+    hub pull-request -i "$argv"
+end
+
+# Github Issue on master branch
+function gissuem
+    git checkout master ; and
+    git pull origin master ; and
+    git checkout -b "issues/$argv" ; and
+    git commit -m "Fixes #$argv" --allow-empty ; and
+    git push -u origin "issues/$argv" ; and
+    hub pull-request -i "$argv"
+end
+
+function gtrack
+    if [[ $# -eq 0 ]]
+        echo "Needs a PR number"
+    else
+        hub pull-request -i "$argv" -b 7Geese:staging
+    end
+
+end
+
+function gpush
+    if [[ $# -eq 0 ]]
+        echo "Needs a PR number"
+    else
+        git push -u origin "issues/$argv"
+        gtrack "$argv"
+    end
+end
+
+function gopen
+    if [[ $# -eq 0 ]]
+        echo "Needs a PR number"
+    else
+        git checkout staging
+        git checkout -b issues/"$argv"
+    end
+end
