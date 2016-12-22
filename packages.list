@@ -5,9 +5,11 @@ autocomplete-modules@1.6.7
 color-picker@2.2.3
 elm-format@2.1.0
 emmet@2.4.3
+expose@0.12.2
 file-icons@1.7.25
 git-plus@5.29.1
 highlight-selected@0.11.2
+language-babel@2.48.5
 language-dotfiles@1.0.0
 language-elm@1.5.0
 linter@1.11.18
@@ -20,5 +22,6 @@ open-recent@5.0.0
 pigments@0.38.0
 seti-syntax@1.0.1
 seti-ui@1.4.0
+sort-lines@0.14.0
 
 
