@@ -30,6 +30,8 @@ alias git-count='git shortlog -sn'
 alias glogd='git log --graph --decorate'
 
 ### Aliases & Functions
+alias st='subl'
+alias a='atom'
 alias be='bundle exec'
 alias rake="noglob rake"
 alias art='php artisan'
@@ -68,7 +70,7 @@ function gissuem
 end
 
 function gtrack
-    if [[ $# -eq 0 ]]
+    if eval [[ count $argv -eq 0 ]]
         echo "Needs a PR number"
     else
         hub pull-request -i "$argv" -b 7Geese:staging
@@ -77,7 +79,7 @@ function gtrack
 end
 
 function gpush
-    if [[ $# -eq 0 ]]
+    if eval [[ count $argv -eq 0 ]]
         echo "Needs a PR number"
     else
         git push -u origin "issues/$argv"
@@ -86,7 +88,7 @@ function gpush
 end
 
 function gopen
-    if [[ $# -eq 0 ]]
+    if eval [[ count $argv -eq 0 ]]
         echo "Needs a PR number"
     else
         git checkout staging
