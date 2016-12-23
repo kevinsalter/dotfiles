@@ -3,10 +3,18 @@
 [user]
     name = Kevin Salter
     email = kevins@7Geese.com
+    signingkey = **put key here**
 [push]
     default = simple
 [credential]
     helper = osxkeychain
-[alias]
-    prev = checkout HEAD^1
-    next = "!sh -c 'git log --reverse --pretty=%H master | awk \"/$(git rev-parse HEAD)/{getline;print}\" | xargs git checkout'"
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[core]
+  editor = vim
+[commit]
+  gpgsign = true
+[gpg]
+  program = /usr/local/bin/gpg
