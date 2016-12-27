@@ -19,15 +19,18 @@ plugins=(git sublime)
 
 source $ZSH/oh-my-zsh.sh
 
+
 ### PATH
 export PATH=/Users/kevinsalter/bin:/usr/local/bin:/usr/local/sbin
 export PATH=${PATH}:/usr/bin:/bin:/usr/sbin:/sbin:
 export PATH=${PATH}:/Applications/Postgres.app/Contents/Versions/9.4/bin:
 
+
 ### hub is a command-line wrapper for git
 if type compdef >/dev/null; then
   compdef hub=git
 fi
+
 
 # make less pager work better with httpie
 function httpless {
@@ -35,8 +38,10 @@ function httpless {
     http --pretty=all --print=hb "$@" | less -R;
 }
 
+
 ### calls eval "$(rbenv init -)"
 source $HOME/.bash_profile
+
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
