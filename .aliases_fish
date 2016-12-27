@@ -1,4 +1,5 @@
 ### Coreutils Aliases
+alias .='cd ~; and deactivate'            # Go up one directory
 alias ..='cd ..'            # Go up one directory
 alias ...='cd ../..'        # Go up two directories
 alias ....='cd ../../..'    # And for good measure
@@ -39,7 +40,6 @@ alias bower='noglob bower'
 alias sha256='shasum -a 256'
 
 alias desk='cd ~/Desktop'
-alias code='cd ~/code'
 alias vhosts='st /etc/hosts'
 alias chrome='open -a "Google Chrome"'
 alias server='open http://localhost:8000; and python -m SimpleHTTPServer'
