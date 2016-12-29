@@ -1,6 +1,6 @@
 PROMPT='
 %{$fg[yellow]%}$(get_pwd)
-%{$reset_color%} %{$fg_bold[white]%}☕︎%{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+%{$reset_color%} %{$fg_bold[white]%}★%{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
 
 # ❯ ❧ ❦ ✰ ❄︎ ☞ ☆ ★ ‡ § #
 
