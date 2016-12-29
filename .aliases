@@ -24,6 +24,7 @@ alias git-count='git shortlog -sn'
 alias glogd='git log --graph --decorate'
 
 ### Aliases & Functions
+alias a='atom'
 alias be='bundle exec'
 alias rake="noglob rake"
 alias art='php artisan'
@@ -31,7 +32,7 @@ alias bower='noglob bower'
 alias sha256='shasum -a 256'
 
 alias desk='cd ~/Desktop'
-alias code='cd ~/code'
+alias code='cd ~/Dropbox/code'
 alias vhosts='st /etc/hosts'
 alias chrome='open -a "Google Chrome"'
 alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
