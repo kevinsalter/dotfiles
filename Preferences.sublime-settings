@@ -1,15 +1,15 @@
 {
   "added_words":
   [
-    "favourite",
-    "workflows",
-    "kevinsalter",
-    "–",
-    "à",
     "blog",
+    "composable",
+    "favourite",
+    "kevinsalter",
     "personas",
     "wireframes",
-    "composable"
+    "workflows",
+    "à",
+    "–"
   ],
   "binary_file_patterns":
   [
@@ -24,39 +24,40 @@
   "fade_fold_buttons": false,
   "file_exclude_patterns":
   [
+    "*.a",
+    "*.class",
+    "*.db",
+    "*.dll",
+    "*.dylib",
+    "*.exe",
+    "*.idb",
+    "*.lib",
+    "*.ncb",
+    "*.o",
+    "*.obj",
+    "*.pdb",
+    "*.psd",
     "*.pyc",
     "*.pyo",
-    "*.exe",
-    "*.dll",
-    "*.obj",
-    "*.o",
-    "*.a",
-    "*.lib",
-    "*.so",
-    "*.dylib",
-    "*.ncb",
     "*.sdf",
-    "*.suo",
-    "*.pdb",
-    "*.idb",
-    ".DS_Store",
-    "*.class",
-    "*.psd",
-    "*.db",
+    "*.so",
     "*.sublime-workspace",
+    "*.suo",
+    ".DS_Store",
+    ".tmp",
     "bundle.js",
-    "bundle_big.js",
-    ".tmp"
+    "bundle_big.js"
   ],
   "folder_exclude_patterns":
   [
-    ".svn",
     ".git",
     ".hg",
-    "CVS",
+    ".svn",
     ".tmp",
+    ".venv",
+    "CVS",
     "node_modules",
-    ".venv"
+    "bower_components"
   ],
   "font_face": "Hack",
   "font_size": 13.5,
