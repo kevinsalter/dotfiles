@@ -22,6 +22,9 @@ alias git-undo='git reset --soft HEAD~1'
 alias git-lines="git ls-files | xargs wc -l"
 alias git-count='git shortlog -sn'
 alias glogd='git log --graph --decorate'
+alias sl='git log --oneline --decorate -20'
+alias sla='git log --oneline --decorate --graph --all -20'
+alias slap='git log --oneline --decorate --graph --all'
 
 ### Aliases & Functions
 alias a='atom'
