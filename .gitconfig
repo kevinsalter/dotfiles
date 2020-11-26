@@ -2,8 +2,7 @@
     ui = true
 [user]
     name = Kevin Salter
-    email = kevins@7Geese.com
-    signingkey = **put key here**
+    email = kevinsalter.developer@gmail.com
 [push]
     default = simple
 [credential]
@@ -13,8 +12,10 @@
   smudge = git-lfs smudge %f
   required = true
 [core]
-  editor = vim
-[commit]
-  gpgsign = true
-[gpg]
-  program = /usr/local/bin/gpg
+	editor = code --wait
+	excludesfile = /Users/kevinsalter/.gitignore_global
+	commentChar = auto
+# [commit]
+#   gpgsign = true
+# [gpg]
+# 	program = /usr/local/bin/gpg
