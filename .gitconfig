@@ -14,7 +14,7 @@
 [core]
 	editor = code --wait
 	excludesfile = /Users/kevinsalter/.gitignore_global
-	commentChar = auto
+	commentChar = $
 # [commit]
 #   gpgsign = true
 # [gpg]
