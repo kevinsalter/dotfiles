@@ -25,6 +25,7 @@ alias glogd='git log --graph --decorate'
 alias sl='git log --oneline --decorate -20'
 alias sla='git log --oneline --decorate --graph --all -20'
 alias slap='git log --oneline --decorate --graph --all'
+alias check-prs="zsh ~/code/check-prs.zsh"
 
 ### Aliases & Functions
 alias a='atom'
@@ -44,6 +45,32 @@ alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 alias showlibrary='chflags nohidden ~/Library/'
 alias hidelibrary='chflags hidden ~/Library'
 
+
+# copy/paste this function into wherever you keep your terminal scripts
+# e.g. `.bashrc`, or `.bash_profile`, or `.zshrc`
+
+tw () {
+    # Branch names must begin with a Teamwork ticket number followed by a dash.
+    # for example: 12345678-branch-name-here
+    if [[ ! $@ =~ ^[0-9]{8}- ]]; then
+        echo "Branch name needs to start with a Teamwork ticket number"
+        return
+    fi
+
+    # Get the first 8 characters from the branch name (Teamwork ticket number)
+    # so we can build the Teamwork task's URL.
+    taskNumber=$(echo $@ | cut -c1-8)
+    taskUrl="https://esports.eu.teamwork.com/#/tasks/$taskNumber"
+
+    # $@ is the argument passed to this function.
+    # In this case, it's the branch name.
+    git checkout dev &&
+    git pull origin dev &&
+    git checkout -b $@ &&
+    git commit -m "#$taskNumber Starting work on $taskUrl" --allow-empty -n &&
+    git push -u origin $@ &&
+    gh pr create --title $@ --body $taskUrl
+}
 
 # Github Issue
 gissue () {
